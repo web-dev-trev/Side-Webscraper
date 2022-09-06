@@ -4,6 +4,9 @@ import requests
 import re
 from bs4 import BeautifulSoup, Comment
 
+
+
+#define "standard pages" vs "custom pages" by setting the names of the default pages in this arry
 standardPages = ['/communities', '/selling', '/buying', '/search-homes', '/properties', '/contact', '/home-valuation', '/testimonials', '/privacy-policy', '/about-us', '/blog', '/mortgage-calculator', '/working-with-the-team', '/off-market-listings']
 
 with open('WP_Engine_Sites.csv', 'r') as csv_file:
@@ -17,6 +20,7 @@ with open('WP_Engine_Sites.csv', 'r') as csv_file:
             csv_reader.__next__()
 
         for line in csv_reader:
+            
             facebookPixelMap = []
             sideGtagMap = []
             customGtagMap = []
